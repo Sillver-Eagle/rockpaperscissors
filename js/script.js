@@ -8,48 +8,55 @@ let scissors;
 let rock;
 let paper;
 
-
 var computerChoice = Math.random();
-
-
 
 $("#shoot").click(function() {
   let input = $("#input").val();
   let computerChoice = $("#computerChoice").val();
   //when user picks rock
-  
-  if (computerChoice > .8){
-    (input === rock && computerChoice <= 0.40) 
-console.log("Tie"); }
-  
-   else if (input === rock && computerChoice >= 0.60) {
-    console.log("Loss");
-}
-   else if (input === rock && computerChoice === 0.50) { 
-    console.log("Win");
+
+  if (input === "rock") {
+    if (computerChoice === computerChoice <= 0.4) {
+      console.log("Tie");
+    } else {
+      if (computerChoice === computerChoice >= 0.6) {
+        console.log("paper wins");
+      }
+      if ((computerChoice === computerChoice) === 0.5) {
+        return "Tie";
+        console.log("rock wins");
+      }
+    }
   }
+
   //when user picks Paper
- else  if (input === paper && computerChoice <= 0.40) {
-    console.log("Win");
- }
-  else if (input === paper && computerChoice >= 0.60) { 
-    console.log("Tie");
-}
-  else if  (input === paper && computerChoice === 0.50) {
-    console.log("Loss");
+
+  if (input === "paper") {
+    if (computerChoice === computerChoice <= 0.4) {
+      console.log("paper wins");
+    } else {
+      if (computerChoice === computerChoice >= 0.6) {
+        console.log("Tie");
+      }
+      if ((computerChoice === computerChoice) === 0.5) {
+        console.log("scissors win");
+      }
+    }
   }
+
   //when user picks scissors
 
-  else if (input === scissors && computerChoice <= 0.40) {
-    console.log("Loss");
-}
-   else if (input === scissors && computerChoice >= 0.60) {
-    console.log("Win");
-}
-
-   else if (input === scissors && computerChoice === 0.50) {
-    console.log("Tie");
+  if (input === "scissors") {
+    if (computerChoice === computerChoice <= 0.4) {
+      console.log("rock wins");
+    } else {
+      if (computerChoice === computerChoice >= 0.6) {
+        console.log("scissors wins");
+      }
+      if ((computerChoice === computerChoice) === 0.5) {
+        return "Tie";
+        console.log("Tie");
+      }
+    }
   }
 });
-
-
